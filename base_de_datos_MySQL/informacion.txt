@@ -1,4 +1,5 @@
 Base de datos MySQL--RESTAURANTE-usuarios -Estructura de Base de Datos
 Creamos una base de datos.
 Importamos la base de datos - Server - DATA import - importamos el archivo a l base de datos anteriormente creada.
+Usuario: jsbp199414@outlook.com contraseña: 123
 Bibliografia: https://youtu.be/jTs1nSwAcRM
