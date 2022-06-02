@@ -1,0 +1,53 @@
+/*--------------------------------------MEDIA QUERY------------------------------------*/
+
+/*--------------------Mediaquery max-width:1286---------------*/
+@media all and (max-width:1286px){
+    /*HEADER*/
+    /*SUBMENU Carro de compras*/
+    #carroCompras{width: 40%;}
+    /*MAIN*/
+    /*SECTION UNO: Definimos ancho y alto, colocamos fondos y animamos*/
+    #fondoUno{background-position: 0px -70px;}
+    #fondoDos{background-position: 0px -120px; }
+    #fondoTres{background-position: 0px -120px;}
+    #fondoCuatro{background-position: 0px -120px;}
+}
+/*--------------------Mediaquery max-width:950---------------*/
+@media all and (max-width:950px){
+    header .lineaDos nav ul li a,h2, h3, h4, .columnTree div nav a,footer div nav ul li a{font-size: small;}
+}
+/*--------------------Mediaquery max-width:780---------------*/
+@media all and (max-width:780px){
+    /*HEADER*/
+    /*Definimos dos filas en header*/
+    header{height: 300px;}
+    /*SUBMENU Carro de compras*/
+    #carroCompras{top: 0; left: 80px; width: 75%;}
+    #carro:hover #carroCompras{display: none;}
+    /*MAIN*/
+    main{height:2000px; grid-template-rows: 250px 625px 600px 525px;}
+    /*MAIN*/
+    /*SECTION UNO: Definimos ancho y alto, colocamos fondos y animamos*/
+    #fondoUno{height: 250PX;}
+    #fondoDos{height: 250PX; }
+    #fondoTres{height: 250PX;}
+    #fondoCuatro{height: 250PX;}
+    /*SECTION TRES: Definimos Grid column, posicionamos imagenenes y textos*/
+    main .columnTree{grid-template-columns: 1fr;}
+    /*FOOTER*/
+    footer{height: 100px; grid-template-rows: 50px  50px;}
+}
+/*--------------------Mediaquery max-width:600---------------*/
+@media all and (max-width:600px){
+/*Definimos dos filas en header*/
+/*HEADER*/
+header .lineaUno{ display: block;}
+/*FILAUNO: Definimos text Grid-column una*/
+header .lineaUno div h1{font-size: 1.4rem;}
+ /*MAIN*/
+ /*SECTION UNO: Definimos ancho y alto, colocamos fondos y animamos*/
+ #fondoUno{background-position: 0px 0px;}
+ #fondoDos{background-position: 0px 0px; }
+ #fondoTres{background-position: 0px 0px;}
+ #fondoCuatro{background-position: 0px 0px;}
+}

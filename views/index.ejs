@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Restaurante Comidas Rapidas con mucho sabor!!!!">
+  <link rel="icon" href="/public/images/icons8-food-bar-48.ico">
+  <link rel="stylesheet" href="/public/stylesheets/index.css">
+  <link rel="stylesheet" href="/public/stylesheets/mediaQuery/modeloMediaQueryIndex.css">
+  <script src="/public/javascripts/menu.js"></script>
+  <!--Script Sweetalert-Libreria-->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <title>Restaurante Comidas Rapidas</title>
+</head>
+
+<body>
+  <!---------------------------CONTENT FLEX-------------------------->
+  <div id="content">
+    <!--------------HEADER------------------>
+    <header>
+      <!--HEADER LINEAUNO-->
+      <div class="lineaUno">
+        <!--LINEAUNO COLUMN UNO-->
+        <div>
+          <h1>Restaurante Comidas Rapidas</h1>
+        </div>
+        <!--LINEAUNO COLUMN DOS-->
+        <div>
+          <form action="get">
+            <input type="search" id="search">
+            <button type="button" id="bot">Buscar</button>
+          </form>
+        </div>
+        <!--LINEAUNO COLUMN TRES-->
+        <div id="carro">
+          <!--SUBMENU CARRO DE COMPRAS-->
+          <div id="carroCompras">
+            <div class="tituloDos">
+              <h2>Tu orden</h2>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Imagen</th>
+                  <th>Nombre</th>
+                  <th>Producto</th>
+                  <th>Precio</th>
+                  <th>Cantidad</th>
+                  <th>X</th>
+                </tr>
+              </thead>
+              <tbody class="tbody">
+
+              </tbody>
+            </table>
+            <div id="total">
+              <div>
+                <h2 class="itemTotal">Total:</h2>
+              </div>
+              <button id="comprar">Comprar</button>
+            </div>
+          </div>
+          <nav>
+            <!-- Visualizacion login-Para visualizar corremos en la terminal nodemon app-->
+            <div id="loginUsuario">
+              <% if(login){ %>
+                <h3>Usuario <%= name %>
+                </h3>
+                <% } %>
+            </div>
+            <ul>
+              <li><a href="http://localhost:3000/pedidos"><img src="/public/images/icons8-carro-de-compras-con-dinero-48.png"
+                    alt="Carrito de compras"></a></li>
+              <li><a href="http://localhost:3000/ingresar"><img
+                    src="/public/images/icons8-usuario-hombre-verificado-48.png" alt="Registro de usuario"></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!--HEADER LINEADOS-->
+      <div class="lineaDos">
+        <nav>
+          <ul>
+            <li><a href="http://localhost:3000#imagenes">
+                <span style="--i:1">M</span>
+                <span style="--i:2">E</span>
+                <span style="--i:3">N</span>
+                <span style="--i:4">U</span></a></li>
+            <li><a href="http://localhost:3000/promociones">
+                <span style="--i:1">P</span>
+                <span style="--i:2">R</span>
+                <span style="--i:3">O</span>
+                <span style="--i:4">M</span>
+                <span style="--i:5">O</span>
+                <span style="--i:6">C</span>
+                <span style="--i:7">I</span>
+                <span style="--i:8">O</span>
+                <span style="--i:9">N</span>
+                <span style="--i:10">E</span>
+                <span style="--i:11">S</span></a></li>
+            <li><a href="http://localhost:3000/tiendas">
+                <span style="--i:1">T</span>
+                <span style="--i:2">I</span>
+                <span style="--i:3">E</span>
+                <span style="--i:4">N</span>
+                <span style="--i:5">D</span>
+                <span style="--i:6">A</span>
+                <span style="--i:7">S</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!--------------MAIN------------------>
+    <main>
+      <!--MAIN SECTION UNO-->
+      <section id="imagenes">
+        <div id="fondoUno"></div>
+        <div id="fondoDos"></div>
+        <div id="fondoTres"></div>
+        <div id="fondoCuatro"></div>
+      </section>
+      <!------------------------MAIN SECTION DOS----------------------->
+      <section id="menu">
+        <ul>
+          <!--MAIN SECTION DOS LISTA UNO-->
+          <li>
+            <input type="radio" name="in" id="botonUno" onchange="showContent()">
+            <label for="botonUno"></label>
+            <div id="cajaUno" class="cajas">
+              <div class="titulo">
+                <h2>Pizzas de la casa</h2>
+                <hr>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/PizzaSencilla1.jpg" alt="Pizza Hawaina" class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="12">Personal $12</option>
+                      <option value="18">Mediana $18</option>
+                      <option value="24">Familiar &nbsp;$24</option>
+                      <option value="30">Mega familiar $30</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Pizza Hawaina</h3>
+                    <p>Jamon canadiense, piña y extra queso</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/PizzaSencilla2.jpg" alt="Pizza Napolitana"
+                    class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="12">Personal $12</option>
+                      <option value="18">Mediana $18</option>
+                      <option value="24">Familiar &nbsp;$24</option>
+                      <option value="30">Mega familiar $30</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Pizza Napolitana</h3>
+                    <p>Jamon, tomates frescos y extra queso</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/PizzaSencilla4.jpg" alt="Pizza Peperoni" class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="12">Personal $12</option>
+                      <option value="18">Mediana $18</option>
+                      <option value="24">Familiar &nbsp;$24</option>
+                      <option value="30">Mega familiar $30</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Pizza Super Peperoni</h3>
+                    <p>Peperoni extra, salsa de tomate y extra queso</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/PizzaSencilla3.jpg" alt="Pizza polloYChampion"
+                    class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="12">Personal $12</option>
+                      <option value="18">Mediana $18</option>
+                      <option value="24">Familiar &nbsp;$24</option>
+                      <option value="30">Mega familiar $30</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Pizza Pollo y Champinones</h3>
+                    <p>Pollo a la parrilla, champiñones frescos y extra queso</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/PizzaEspecial3.jpg" alt="Pizza Carnes" class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="12">Personal $12</option>
+                      <option value="18">Mediana $18</option>
+                      <option value="24">Familiar &nbsp;$24</option>
+                      <option value="30">Mega familiar $30</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Pizza Carnes</h3>
+                    <p>Pepperoni, salchicha de cerdo, jamon canadiense, tocineta y carne</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/PizzaEspecial2.jpg" alt="Pizza Atun" class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="12">Personal $12</option>
+                      <option value="18">Mediana $18</option>
+                      <option value="24">Familiar &nbsp;$24</option>
+                      <option value="30">Mega familiar $30</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Pizza Atun</h3>
+                    <p>Atun, cebolla en rodajas y extra queso</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!--MAIN SECTION DOS LISTA DOS-->
+          <li>
+            <input type="radio" name="in" id="botonDos" class="ss" onchange="showContent()">
+            <label for="botonDos"></label>
+            <div id="cajaDos" class="cajas">
+              <div class="titulo">
+                <h2>Hamburguesas de la casa</h2>
+                <hr>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/HamburguesaSencilla1.jpg" alt="Hamburguesa Sencilla"
+                    class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="12">Personal $12</option>
+                      <option value="18">Personal + papas $18</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Hamburguesa Sencilla</h3>
+                    <p>Pan artesanal + 1/4 de libra de carne + Queso americano + Vegetales + Salsas artesanales</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/HamburguesaSencilla2.jpg" alt="Hamburguesa Sencilla Filet"
+                    class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="12">Personal $12</option>
+                      <option value="18">Personal + papas $18</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Hamburguesa Sencilla Filet</h3>
+                    <p>Pan artesanal + 1/4 de libra de carne + Jamon + Tocineta + Queso americano + Vegetales + Salsas
+                      artesanales</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/HamburguesaSencilla3.jpg" alt="Hamburguesa Sencilla champiñon"
+                    class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="12">Personal $12</option>
+                      <option value="18">Personal + papas $18</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Hamburguesa Sencilla Champinones</h3>
+                    <p>Pan artesanal + 1/4 de libra de carne + Rodajas-champiñon + Queso americano + Vegetales +
+                      Salsas artesanales</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/HamburguesaSencilla4.jpg" alt="Hamburguesa Sencilla Pechuga"
+                    class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="12">Personal $12</option>
+                      <option value="18">Personal + papas $18</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Hamburguesa Sencilla Pechuga</h3>
+                    <p>Pan artesanal + 1/4 de libra de pechuga + Jamon + Queso americano + Vegetales + Salsas
+                      artesanales</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/HamburguesaSencilla5.jpg" alt="Hamburguesa Sencilla Frisby"
+                    class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="12">Personal $12</option>
+                      <option value="18">Personal + papas $18</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Hamburguesa Sencilla Frisby</h3>
+                    <p>Pan artesanal + 1/4 de libra de pechuga fisbry + Jamon + Queso americano + Vegetales + Salsas
+                      artesanales</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/HamburguesaEspecial4.jpg" alt="Hamburguesa Doble"
+                    class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="20">Personal doble carne $20</option>
+                      <option value="20">Personal doble pechuga $20</option>
+                      <option value="20">Personal doble frysby $20</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Hamburguesa Doble De Casa</h3>
+                    <p>Pan artesanal + 2 * 1/4 de libra de proteina + Jamon + Queso americano + Vegetales + Salsas
+                      artesanales</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!--MAIN SECTION DOS LISTA TRES-->
+          <li>
+            <input type="radio" name="in" id="botonTres" onchange="showContent()">
+            <label for="botonTres"></label>
+            <div id="cajaTres" class="cajas">
+              <div class="titulo">
+                <h2>HotDog de la casa</h2>
+                <hr>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/HotDog.jpg" alt="HotDog" class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="12">Personal $12</option>
+                      <option value="18">Personal + papas $18</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Hot Dog Sencillo</h3>
+                    <p>Pan artesanal + Salchicha americana + Cebolla + Carne molida + Salsas artesanales</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/HotDogEspecial1.jpg" alt="HotDog Carnes" class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="12">Personal $12</option>
+                      <option value="18">Personal + papas $18</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Hot Dog Carnes</h3>
+                    <p>Pan artesanal + Salchicha americana + Tocineta + Jamon + Carne molida + Cebolla + Salsas
+                      artesanales</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/HotDogSencillo3.jpg" alt="HotDog Queso" class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="12">Personal $12</option>
+                      <option value="18">Personal + papas $18</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Hot Dog Queso</h3>
+                    <p>Pan artesanal + Salchicha americana + Tocineta + Jamon + Queso americano + Cebolla + Salsas
+                      artesanales</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/HotDogSencillo4.jpg" alt="HotDog Mexicano"
+                    class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="12">Personal $12</option>
+                      <option value="18">Personal + papas $18</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Hot Dog Mexicano</h3>
+                    <p>Pan artesanal + Salchicha americana + Jamon + Pollo + Cebolla + Salsas mexicanas</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/HotDogEspecial3.jpg" alt="HotDog pollo" class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="12">Personal $12</option>
+                      <option value="18">Personal + papas $18</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Hot Dog pollo y carne</h3>
+                    <p>Pan artesanal + Salchicha americana + Pollo + Carne + Cebolla + Salsas artesanales</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/HotDogEspecial4.jpg" alt="HotDog Super" class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="15">Personal $15</option>
+                      <option value="22">Personal + papas $22</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Hot Dog Super</h3>
+                    <p>Pan artesanal + Salchicha americana + Jamon + Tocineta + Pollo + Carne + Queso + Cebolla + Salsas
+                      artesanales</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!--SECTION DOS LISTA TRES-->
+          <li>
+            <input type="radio" name="in" id="botonCuatro" onchange="showContent()">
+            <label for="botonCuatro"></label>
+            <div id="cajaCuatro" class="cajas">
+              <div class="titulo">
+                <h2>Postres de la casa</h2>
+                <hr>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/BroWine.jpg" alt="Browine" class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="12">Personal $12</option>
+                      <option value="18">Personal + bola de helado $18</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Browine</h3>
+                    <p>Nuestros deliciosos browines de chocolate rellenos de salsa de arequipe y una base de crema de
+                      chantilly</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/CakeFrutosRojos.jpg" alt="Cake Frutos Rojos"
+                    class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="12">Personal $12</option>
+                      <option value="18">Personal + bola de helado $18</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Cake Frutos Rojos</h3>
+                    <p>Cake frutos rojos con capa de azucar, salsa de mora y relleno de chocolate</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/Cookies.jpg" alt="Cookies" class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="12">Personal $12</option>
+                      <option value="18">Personal + bola de helado $18</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Cookies</h3>
+                    <p>Nuestras deliciosas galletas de chips de chocolate recien horneadas para disfrutar con la familia
+                    </p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/TortaChocolate.jpg" alt="Torta Chocolate" class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="12">Personal $12</option>
+                      <option value="18">Personal + bola de helado $18</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Torta Chocolate</h3>
+                    <p>Nuestro deliciosa torta de chocolate acompañada de salsa de arequipe</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/Waflehelado.jpg" alt="Wafle helado" class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="12">Personal $12</option>
+                      <option value="18">Personal + bola de helado $18</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Wafle Helado</h3>
+                    <p> Nuestro deliciosa wafle horneado, fresas y con bolas de helado a eleccion</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/HeladosArtesanales.jpg" alt="Helados Artesanales"
+                    class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="6">Bola de helado $6</option>
+                      <option value="12">2-Bola de helado $12</option>
+                      <option value="18">3-Bola de helado $18</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Helados Artesanales</h3>
+                    <p>Nuestros deliciosos helados artesanales acompañadas con topping y salsa</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!--SECTION DOS LISTA CINCO-->
+          <li>
+            <input type="radio" name="in" id="botonCinco" onchange="showContent()">
+            <label for="botonCinco"></label>
+            <div id="cajaCinco" class="cajas">
+              <div class="titulo">
+                <h2>Bebidas y Acompañamientos</h2>
+                <hr>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/ArosCebolla.jpg" alt="Aros Cebolla" class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="8">Porcion $8</option>
+                      <option value="10">Porcion + queso $10</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Aros de Cebolla</h3>
+                    <p>Otra alternativa para acompañar nuestras delicias - Aros de cebolla con salsa RCR</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/Papas.jpg" alt="Papas fritas" class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="8">Porcion $8</option>
+                      <option value="10">Porcion + queso $10</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Papas fritas</h3>
+                    <p>Nuestras deliciosas papas fritas artesanales acompañadas con nuestra salsa RCR</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/Nuggets.jpg" alt="Nuggets" class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="8">Porcion $8</option>
+                      <option value="10">Porcion + queso $10</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Nuggets</h3>
+                    <p>Nuestras deliciosas nuggets artesanales acompañadas con salsa RCR</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/Limonada.jpg" alt="Limonada" class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="14">Onza de 16 $14</option>
+                      <option value="10">Onza de 12 $10</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Limonada Natural</h3>
+                    <p>Limonada natural refrescante para acompañar tus comidas</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/jugoNatural.jpg" alt="Jugo Natural" class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="14">Onza de 16 $14</option>
+                      <option value="10">Onza de 12 $10</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Jugo Natural</h3>
+                    <p>Jugos naturales para acompañar tus comidas, sabor eleccion</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+              <div class="box">
+                <div>
+                  <img src="/public/images/index/Malteada.jpg" alt="Malteada" class="sectionImagen imagen">
+                </div>
+                <div class="sectionGrid">
+                  <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="14">Onza de 16 $14</option>
+                      <option value="10">Onza de 12 $10</option>
+                    </select>
+                  </div>
+                  <div>
+                    <h3>Malteada</h3>
+                    <p>Malteada sabor a eleccion para acompañar tus comidas</p>
+                  </div>
+                  <div> <button type="button">Agregar al carrito</button></div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <!--MAIN SECTION TRES-->
+      <section class="columnTree">
+        <!--SECTION TRES COLUMN UNO-->
+        <div>
+          <nav>
+            <a href="http://localhost:3000/canvas"><img src="/public/images/modelo_pagina_general/HotDog.jpg" alt="Canvas"
+                class="imagen"></a>
+          </nav>
+          <div>
+            <h3>GAME CANVAS</h3>
+          </div>
+        </div>
+        <!--SECTION TRES COLUMN DOS-->
+        <div>
+          <nav>
+            <a href="http://localhost:3000/empresa"><img src="/public/images/modelo_pagina_general/Pizza.jpg"
+                alt="Empresa" class="imagen"></a>
+          </nav>
+          <div>
+            <h3>EMPRESA</h3>
+          </div>
+        </div>
+        <!--SECTION TRES COLUMN TRES-->
+        <div>
+          <nav>
+            <a href="http://localhost:3000/trabajaConNosotros"><img
+                src="/public/images/modelo_pagina_general/Hamburguesa.jpg" alt="Trabaja con nosotros"
+                class="imagen"></a>
+          </nav>
+          <div>
+            <h3>TRABAJA CON NOSOTROS</h3>
+          </div>
+        </div>
+      </section>
+      <!--MAIN SECTION CUATRO-->
+      <section class="columnTree">
+        <!--SECTION CUATRO COLUMN UNO-->
+        <div>
+          <h4><span>RCR</span></h4>
+          <p>
+            Reprehenderit amet tempor mollit Lorem. Est nostrud do excepteur
+            culpa adipisicing reprehenderit veniam pariatur fugiat commodo
+            Lorem laboris pariatur exercitation. Amet aliquip velit ipsum
+            cupidatat ea nostrud aliquip labore magna occaecat.Est nostrud
+            do excepteur culpa adipisicing reprehenderit veniam pariatur fugiat
+            commodo Lorem laboris pariatur exercitation. Amet aliquip velit ipsum
+            cupidatat ea nostrud aliquip labore magna occaecat.
+          </p>
+        </div>
+        <!--SECTION CUATRO COLUMN DOS-->
+        <div>
+          <h4>Contactenos</h4>
+          <p>
+            Restaurante Comidas Rapidas S.A.S Colombia. <br>
+            Nit-900 414 301 -4 <br>
+            Calle 70a # 94-67 <br>
+            Bogota, Colombia <br>
+            Llamanos-3134173095 <br>
+            Email-SuperComidasRapidas@gmail.com
+          </p>
+          <br>
+          <nav class="ContentTwo">
+            <a href="https://www.sic.gov.co/" target="_blank" rel="noopener noreferrer"><span>Superintendencia industria
+                y comercio S.I.C</span></a>
+          </nav>
+        </div>
+        <!--SECTION CUATRO COLUMN TRES-->
+        <div id="columnTreeIcon">
+          <h4>Siguenos</h4>
+          <nav>
+            <ul>
+              <li><a href="https://www.facebook.com" target="_blank"><img src="/public/images/icons8-facebook.svg"
+                    alt="Facebook"></a></li>
+              <li><a href="https://www.twitter.com" target="_blank"><img src="/public/images/icons8-twitter.svg"
+                    alt="Twitter"></a></li>
+              <li><a href="https://www.youtube.com" target="_blank"><img src="/public/images/icons8-youtube-play.svg"
+                    alt="Youtube"></a></li>
+              <li><a href="https://www.instagram.com" target="_blank"><img src="/public/images/icons8-instagram.svg"
+                    alt="Instagram"></a></li>
+              <li><a href="https://jsbp199414.github.io/Portafolio/" target="_blank"><img src="/public/images/icons8-hamburger-50.ico" alt=""></a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </main>
+    <!--------------FOOTER------------------>
+    <footer>
+      <div>
+        <nav>
+          <ul>
+            <li><a href="/public/pdf/TerminosYCondiciones.pdf" target="_blank">Terminos y condiciones</a></li>
+            <li><a href="/public/pdf/PoliticasDePrivacidad.pdf" target="_blank">Politicas de privacidad</a></li>
+            <li><a href="https://icons8.com/icon/DZe3wFKTc8IK/búsqueda">Búsqueda icon by Icons8</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div>
+        <p>
+          Designed and developed by <span> D-UNA</span> e-Commerce © 2022 D-UNA. Derechos reservados.
+        </p>
+      </div>
+    </footer>
+  </div>
+  <script src="/public/javascripts/busqueda.js"></script>
+  <script src="/public/javascripts/agregarProductos.js"></script>
+</body>
+
+</html>

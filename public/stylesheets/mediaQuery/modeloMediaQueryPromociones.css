@@ -1,0 +1,10 @@
+@import url(/public/stylesheets/mediaQuery/modeloMediaQuery.css);
+
+/*--------------------Mediaquery max-width:780---------------*/
+@media all and (max-width:780px){
+    /*MAIN*/
+    main{height:2800px; grid-template-rows: 250px 1425px 600px 525px;}
+    /*SECTION DOS*/
+    main section#promociones div div.box{margin: 15px 2px;}
+    .sectionGrid div p{font-size: .7rem;}
+}

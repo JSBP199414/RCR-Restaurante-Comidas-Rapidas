@@ -1,0 +1,29 @@
+@import url(/public/stylesheets/mediaQuery/modeloMediaQuery.css);
+
+/*--------------------Mediaquery max-width:1286---------------*/
+@media all and (max-width:1175px){
+    /*SECTION DOS*/
+    #menu ul li div.cajas div.box{grid-template-columns: 25% 75%;}
+    #menu ul li label{width: 2.3%;}
+}
+/*--------------------Mediaquery max-width:950---------------*/
+@media all and (max-width:950px){
+    /*SECTION DOS*--MARGEN DE CAJAS BOX*/
+    #menu ul li div.cajas div.box{width: 40%; margin: 2PX auto;}
+}
+/*--------------------Mediaquery max-width:885---------------*/
+@media all and (max-width:885px){
+    /*MAIN:SECTION DOS--AUMENTAMOS EL TAMAÑO DE LA SECTION DOS*/
+     main{height:1600px; grid-template-rows: 350px 825px 200px 225px;}
+     /*SECTION DOS: Diseño de la section*/
+     #menu{margin: auto;}
+     #menu ul li label{top: -150px;}
+     /*SECTION DOS*--MARGEN DE CAJAS BOX*/
+     #menu ul li div.cajas div.box{width: 100%; margin: 2PX auto;}
+}
+/*--------------------Mediaquery max-width:780---------------*/
+@media all and (max-width:780px){
+  /*MAIN:SECTION DOS--AUMENTAMOS EL TAMAÑO DE LA SECTION DOS*/
+  main{height:2200px; grid-template-rows: 250px 825px 600px 525px;}
+  #menu ul li label{width: 2%;}
+}

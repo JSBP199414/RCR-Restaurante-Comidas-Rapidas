@@ -1,0 +1,27 @@
+@import url(/public/stylesheets/modeloPagina.css);
+
+/*SECTION DOS*/
+#carroCompras{
+    width: 90%;
+    height: 300px;
+    margin: 5px auto;
+    position: relative;
+    overflow-y: scroll;
+    display: block;
+    z-index: 0;
+    border: .5px solid rgb(211, 211, 211);
+    border-radius: 10px;
+    background:rgba(255, 255, 255, 0.9);
+    box-shadow: .5px 2px rgba(255, 255, 255, 0.9);    
+}
+tbody td.imagenAlto img{
+    width: 20%;
+    height: 20%;
+    object-fit: cover;
+}
+tbody,th,td{
+    border: .5px solid transparent;
+}
+#carroCompras div#total div h2{
+    color: #DF867F;
+}

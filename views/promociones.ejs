@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="/public/images/icons8-food-bar-48.ico">
+  <link rel="stylesheet" href="/public/stylesheets/promociones.css">
+  <link rel="stylesheet" href="/public/stylesheets/mediaQuery/modeloMediaQueryPromociones.css">
+  <!--Script Sweetalert-Libreria-->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <title>Restaurante Comidas Rapidas</title>
+</head>
+<body>
+  <!---------------------------CONTENT FLEX-------------------------->
+  <div id="content">
+    <!--------------HEADER------------------>
+    <header>
+      <!--HEADER LINEAUNO-->
+      <div class="lineaUno">
+        <!--LINEAUNO COLUMN UNO-->
+        <div><h1>Restaurante Comidas Rapidas</h1></div>
+        <!--LINEAUNO COLUMN DOS-->
+        <div>
+          <form action="get">
+            <input type="search" id="search">
+            <button type="button" id="bot">Buscar</button>
+          </form>
+        </div>
+        <!--LINEAUNO COLUMN TRES-->
+        <div id="carro">
+           <!--SUBMENU CARRO DE COMPRAS-->
+           <div id="carroCompras">
+            <div class="tituloDos">
+              <h2>Tu orden</h2>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Imagen</th>
+                  <th>Nombre</th>
+                  <th>Producto</th>
+                  <th>Precio</th>
+                  <th>Cantidad</th>
+                  <th>X</th>
+                </tr>
+              </thead>
+              <tbody class="tbody">
+
+              </tbody>
+            </table>
+            <div id="total">
+              <div>
+                <h2 class="itemTotal">Total:</h2>
+              </div>
+              <button id="comprar">Comprar</button>
+            </div>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="http://localhost:3000/pedidos"><img src="/public/images/icons8-carro-de-compras-con-dinero-48.png" alt="Carrito de compras"></a></li>
+              <li><a href="http://localhost:3000/ingresar"><img src="/public/images/icons8-usuario-hombre-verificado-48.png" alt="Registro de usuario"></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!--HEADER LINEADOS-->
+      <div class="lineaDos">
+        <nav>
+          <ul>
+            <li><a href="http://localhost:3000">
+              <span style="--i:1">M</span>
+              <span style="--i:2">E</span>
+              <span style="--i:3">N</span>
+              <span style="--i:4">U</span></a></li>
+            <li><a href="#">
+              <span style="--i:1">P</span>
+              <span style="--i:2">R</span>
+              <span style="--i:3">O</span>
+              <span style="--i:4">M</span>
+              <span style="--i:5">O</span>
+              <span style="--i:6">C</span>
+              <span style="--i:7">I</span>
+              <span style="--i:8">O</span>
+              <span style="--i:9">N</span>
+              <span style="--i:10">E</span>
+              <span style="--i:11">S</span></a></li>
+            <li><a href="http://localhost:3000/tiendas">
+              <span style="--i:1">T</span>
+              <span style="--i:2">I</span>
+              <span style="--i:3">E</span>
+              <span style="--i:4">N</span>
+              <span style="--i:5">D</span>
+              <span style="--i:6">A</span>
+              <span style="--i:7">S</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!--------------MAIN------------------>
+    <main>
+      <!--MAIN SECTION UNO-->
+      <section id="imagenes">
+        <div id="fondoUno"></div>
+        <div id="fondoDos"></div>
+        <div id="fondoTres"></div>
+        <div id="fondoCuatro"></div>
+      </section>
+      <!--MAIN SECTION DOS-->
+      <section id="promociones">
+        <!--MAIN SECTION DOS COLUMNA UNA-->
+        <div>
+          <div class="texto">
+              <span style="--i:1">A</span>
+              <span style="--i:2">-</span>
+              <span style="--i:3">M</span>
+              <span style="--i:4">I</span>
+              <span style="--i:5">T</span>
+              <span style="--i:6">A</span>
+              <span style="--i:7">D</span>
+              <span style="--i:8">-</span>
+              <span style="--i:9">D</span>
+              <span style="--i:10">E</span>
+              <span style="--i:11">-</span>
+              <span style="--i:12">P</span>
+              <span style="--i:13">R</span>
+              <span style="--i:14">E</span>
+              <span style="--i:15">C</span>
+              <span style="--i:16">I</span>
+              <span style="--i:17">O</span>
+          </div>
+          <div class="box">
+            <div>
+              <img src="/public/images/index/HamburguesaSencilla2.jpg" alt="Hamburguesa Sencilla Filet" class="sectionImagen imagen">
+            </div>
+            <div class="sectionGrid">
+                <div>
+                    <select name="tamanio" class="tamanio">
+                      <option value="12">Personal $12</option>
+                      <option value="18">Personal + papas $18</option>
+                    </select>
+                </div>
+                <div>
+                  <h3>Hamburguesa Sencilla Filet</h3>
+                  <p>Pan artesanal + 1/4 de libra de carne + Jamon + Tocineta + Queso americano + Vegetales + Salsas artesanales</p>
+                </div>
+                <div> <button type="button">Agregar al carrito</button></div>
+            </div>
+        </div>
+        <div class="box">
+          <div>
+            <img src="/public/images/index/HamburguesaSencilla3.jpg" alt="Hamburguesa Sencilla champiñon" class="sectionImagen imagen">
+          </div>
+          <div class="sectionGrid">
+              <div>
+                  <select name="tamanio" class="tamanio">
+                    <option value="12">Personal $12</option>
+                    <option value="18">Personal + papas $18</option>
+                  </select>
+              </div>
+              <div >
+                <h3>Hamburguesa Sencilla Champinones</h3>
+                <p>Pan artesanal + 1/4 de libra de carne + Champiñon + Queso americano + Vegetales  + Salsas artesanales</p>
+            </div>
+              <div> <button type="button">Agregar al carrito</button></div>
+          </div>
+      </div>
+      <div class="box">
+        <div>
+          <img src="/public/images/index/HotDogEspecial1.jpg" alt="HotDog Carnes" class="sectionImagen imagen">
+        </div>
+        <div class="sectionGrid">
+          <div>
+            <select name="tamanio" class="tamanio">
+              <option value="12">Personal $12</option>
+              <option value="18">Personal + papas $18</option>
+            </select>
+          </div>
+          <div>
+            <h3>Hot Dog Carnes</h3>
+            <p>Pan artesanal + Salchicha americana + Tocineta + Jamon + Carne molida + Cebolla + Salsas
+              artesanales</p>
+          </div>
+          <div> <button type="button">Agregar al carrito</button></div>
+        </div>
+      </div>
+      <div class="box">
+        <div>
+          <img src="/public/images/index/HotDogSencillo3.jpg" alt="HotDog Queso" class="sectionImagen imagen">
+        </div>
+        <div class="sectionGrid">
+          <div>
+            <select name="tamanio" class="tamanio">
+              <option value="12">Personal $12</option>
+              <option value="18">Personal + papas $18</option>
+            </select>
+          </div>
+          <div>
+            <h3>Hot Dog Queso</h3>
+            <p>Pan artesanal + Salchicha americana + Tocineta + Jamon + Queso americano + Cebolla + Salsas
+              artesanales</p>
+          </div>
+          <div> <button type="button">Agregar al carrito</button></div>
+        </div>
+      </div>
+        </div>
+        <!--SECTION DOS COLUMNA DOS-->
+        <div>
+          <div class="box">
+            <div>
+              <img src="/public/images/index/PizzaSencilla1.jpg" alt="Pizza Hawaina" class="sectionImagen imagen">
+            </div>
+            <div class="sectionGrid">
+                <div>
+                    <select name="tamanio" class="tamanio">
+                        <option value="12">Personal $12</option>
+                        <option value="18">Mediana $18</option>
+                        <option value="24">Familiar &nbsp;$24</option>
+                        <option value="30">Mega familiar $30</option>
+                    </select>
+                </div>
+                <div>
+                    <h3>Pizza Hawaina</h3>
+                    <p>Jamon canadiense, piña y extra queso</p>
+                </div>
+                <div> <button type="button">Agregar al carrito</button></div>
+            </div>
+          </div>
+          <div class="box">
+            <div>
+              <img src="/public/images/index/PizzaSencilla2.jpg" alt="Pizza Napolitana" class="sectionImagen imagen">
+            </div>
+            <div class="sectionGrid">
+                <div>
+                    <select name="tamanio" class="tamanio">
+                        <option value="12">Personal $12</option>
+                        <option value="18">Mediana $18</option>
+                        <option value="24">Familiar &nbsp;$24</option>
+                        <option value="30">Mega familiar $30</option>
+                    </select>
+                </div>
+                <div>
+                    <h3>Pizza Napolitana</h3>
+                    <p>Jamon, tomates frescos y extra queso</p>
+                </div>
+                <div> <button type="button">Agregar al carrito</button></div>
+            </div>
+        </div>
+        <div class="box">
+          <div>
+            <img src="/public/images/index/PizzaSencilla4.jpg" alt="Pizza Peperoni" class="sectionImagen imagen">
+          </div>
+          <div class="sectionGrid">
+              <div>
+                  <select name="tamanio" class="tamanio">
+                      <option value="12">Personal $12</option>
+                      <option value="18">Mediana $18</option>
+                      <option value="24">Familiar &nbsp;$24</option>
+                      <option value="30">Mega familiar $30</option>
+                  </select>
+              </div>
+              <div >
+                <h3>Pizza Super Peperoni</h3>
+                <p>Peperoni extra, salsa de tomate y extra queso</p>
+            </div>
+              <div> <button type="button">Agregar al carrito</button></div>
+          </div>
+      </div>
+      <div class="box">
+        <div>
+          <img src="/public/images/index/PizzaSencilla3.jpg" alt="Pizza polloYChampion" class="sectionImagen imagen">
+        </div>
+        <div class="sectionGrid">
+            <div>
+                <select name="tamanio" class="tamanio">
+                    <option value="12">Personal $12</option>
+                    <option value="18">Mediana $18</option>
+                    <option value="24">Familiar &nbsp;$24</option>
+                    <option value="30">Mega familiar $30</option>
+                </select>
+            </div>
+            <div>
+                <h3>Pizza Pollo y Champinones</h3>
+                <p>Pollo a la parrilla, champiñones frescos y extra queso</p>
+            </div>
+            <div> <button type="button">Agregar al carrito</button></div>
+          </div>
+        </div>
+         <!--SECTION DOS COLUMNA DOS TEXTO-->
+         <div class="texto">
+          <span style="--i:1">A</span>
+          <span style="--i:2">L</span>
+          <span style="--i:3">-</span>
+          <span style="--i:4">5</span>
+          <span style="--i:5">0</span>
+          <span style="--i:6">%</span>
+          <span style="--i:7">-</span>
+          <span style="--i:8">D</span>
+          <span style="--i:9">E</span>
+          <span style="--i:10">-</span>
+          <span style="--i:11">D</span>
+          <span style="--i:12">E</span>
+          <span style="--i:13">S</span>
+          <span style="--i:14">C</span>
+          <span style="--i:15">U</span>
+          <span style="--i:16">E</span>
+          <span style="--i:17">N</span>
+          <span style="--i:16">T</span>
+          <span style="--i:17">O</span>
+      </div>
+        </div>
+      </section>
+      <!--MAIN SECTION TRES-->
+      <section class="columnTree">
+         <!--SECTION TRES COLUMN UNO-->
+        <div>
+          <nav>
+            <a href="http://localhost:3000/canvas"><img src="/public/images/modelo_pagina_general/HotDog.jpg" alt="" class="imagen"></a>
+          </nav>
+          <div><h3>GAME CANVAS</h3></div>
+        </div>
+        <!--SECTION TRES COLUMN DOS-->
+        <div>
+          <nav>
+            <a href="http://localhost:3000/empresa"><img src="/public/images/modelo_pagina_general/Pizza.jpg" alt="Empresa" class="imagen"></a>
+          </nav>
+          <div><h3>Empresa</h3></div>
+        </div>
+        <!--SECTION TRES COLUMN TRES-->
+        <div>
+          <nav>
+            <a href="http://localhost:3000/trabajaConNosotros"><img src="/public/images/modelo_pagina_general/Hamburguesa.jpg" alt="Trabaja con nosotros" class="imagen"></a>
+          </nav>
+          <div><h3>Trabaja con nosotros</h3></div>
+        </div>
+      </section>
+       <!--MAIN SECTION CUATRO-->
+      <section class="columnTree">
+         <!--SECTION CUATRO COLUMN UNO-->
+       <div>
+        <h4><span>RCR</span></h4>
+        <p>
+          Reprehenderit amet tempor mollit Lorem. Est nostrud do excepteur
+          culpa adipisicing reprehenderit veniam pariatur fugiat commodo
+          Lorem laboris pariatur exercitation. Amet aliquip velit ipsum
+          cupidatat ea nostrud aliquip labore magna occaecat.Est nostrud 
+          do excepteur culpa adipisicing reprehenderit veniam pariatur fugiat
+          commodo Lorem laboris pariatur exercitation. Amet aliquip velit ipsum
+          cupidatat ea nostrud aliquip labore magna occaecat.
+        </p>
+       </div>
+       <!--SECTION CUATRO COLUMN DOS-->
+       <div>
+        <h4>Contactenos</h4>
+        <p>
+            Restaurante Comidas Rapidas S.A.S Colombia. <br>
+            Nit-900 414 301 -4 <br>
+            Calle 70a # 94-67 <br>
+            Bogota, Colombia <br>
+            Llamanos-3134173095 <br>
+            Email-SuperComidasRapidas@gmail.com
+        </p>
+        <br>
+        <nav class="ContentTwo">
+            <a href="https://www.sic.gov.co/" target="_blank" rel="noopener noreferrer"><span>Superintendencia industria y comercio S.I.C</span></a>
+        </nav>
+       </div>
+       <!--SECTION CUATRO COLUMN TRES-->
+       <div id="columnTreeIcon">
+        <h4>Siguenos</h4>
+        <nav>
+          <ul>
+            <li><a href="https://www.facebook.com" target="_blank"><img src="/public/images/icons8-facebook.svg" alt="Facebook"></a></li>
+            <li><a href="https://www.twitter.com" target="_blank"><img src="/public/images/icons8-twitter.svg" alt="Twitter"></a></li>
+            <li><a href="https://www.youtube.com" target="_blank"><img src="/public/images/icons8-youtube-play.svg" alt="Youtube"></a></li>
+            <li><a href="https://www.instagram.com" target="_blank"><img src="/public/images/icons8-instagram.svg" alt="Instagram"></a></li>
+            <li><a href="https://jsbp199414.github.io/Portafolio/" target="_blank"><img src="/public/images/icons8-hamburger-50.ico" alt=""></a></li>
+          </ul>
+        </nav>
+       </div>
+      </section>
+    </main>
+     <!--------------FOOTER------------------>
+    <footer>
+      <div>
+        <nav>
+          <ul>
+            <li ><a href="/public/pdf/TerminosYCondiciones.pdf" target="_blank">Terminos y condiciones</a></li>
+            <li ><a href="/public/pdf/PoliticasDePrivacidad.pdf" target="_blank">Politicas de privacidad</a></li>
+            <li><a href="https://icons8.com/icon/DZe3wFKTc8IK/búsqueda">Búsqueda icon by Icons8</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div>
+          <p>
+            Designed and developed by <span> D-UNA</span> e-Commerce © 2022 D-UNA. Derechos reservados.
+          </p>
+      </div>
+    </footer>
+  </div>
+  <script src="/public/javascripts/busqueda.js"></script>
+  <script src="/public/javascripts/agregarProductos.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+@import url(/public/stylesheets/modeloPagina.css);
+/*Importamos modeloPagina.css*/
+
+/*-----------------------------MAIN: SECTION DOS--------------------------------*/
+/*SECTION DOS: Diseño de la section*/
+#menu{
+    position: relative;
+    width: 100%;
+    margin: 2px auto;
+    padding: 1px;
+    box-sizing: border-box;
+}
+#menu ul{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 490px;
+    padding: 1px;
+}
+#menu ul li label{
+    position: relative;
+    z-index: 3;
+    float: left;
+    top: 20px;
+    width: .8%;
+    height: 10px;
+    margin: 1px 4px;
+    border: 2px solid #DF867F;
+    border-radius: 100%;
+    cursor: pointer;
+}
+#menu ul li label:hover{
+    background-color: #DF867F;
+}
+#menu ul li label:active{
+    background-color: #cc0e00;
+}
+#menu ul li input{
+    display: none;
+}
+/*SECTION DOS:Diseño las cajas div*/
+#menu ul li div.cajas{
+    position: absolute;
+    width: 100%;
+    height: 490px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: space-around;
+}
+/*SECTION DOS: Ocultamos las cajas div*/
+#menu ul li div#cajaUno{
+    display: flex;
+}
+#menu ul li div#cajaDos{
+    display: none;
+}
+#menu ul li div#cajaTres{
+    display: none;
+}
+#menu ul li div#cajaCuatro{
+    display: none;
+}
+#menu ul li div#cajaCinco{
+    display: none;
+}
+/*SECTION DOS: Diseño de titulo*/
+#menu ul li div.cajas div.titulo{
+   width: 100%;
+   height: 20px;
+   margin: 10px auto;
+   padding: 1px;
+   background-color: rgba(238, 237, 237, 0.9);
+   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); 
+}
+/*SECTION DOS: Diseño de box--imagen*/
+#menu ul li div.cajas div.box{
+    width: 31%;
+    height: 120px;
+    margin: 1px 2px;
+    padding: 1px;
+    border: 1px solid transparent;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    column-gap: .5px;
+}
+ .sectionImagen{
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+/*SECTION  DOS: Section grid*/
+.sectionGrid{
+    height: 120px;
+    border: .2px solid transparent;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: .1px;
+}
+.sectionGrid select{
+    margin: 1px auto 0px;
+    padding: 2px;
+    text-align: center;
+}
+/*SECTIONTRESONE sectionGrid -- sectionGrid input*/
+.sectionGrid div button{
+    background-color: #F5987F;
+    border: 1px solid #DF867F;
+    border-radius: 10px 10px 10px 10px;
+    cursor: pointer;
+}
+.sectionGrid div button:hover{
+    background-color: #DF867F;
+    border-radius: 10px 10px 10px 10px;
+    transform: scale(1.14,1.14);
+}
+button[type=button]{
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+

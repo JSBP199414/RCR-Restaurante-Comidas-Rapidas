@@ -1,0 +1,85 @@
+@import url(/public/stylesheets/modeloPagina.css);
+/*MAIN: Diseño main--Tomamos el mismo diseño main de modelo y cambiamos el tamaño de row dos*/
+main{
+    flex-basis: 100%;
+    height:2200px;
+    display: grid;
+    grid-template-rows: 350px 1425px 200px 225px;
+    row-gap: 1px;
+    background-color:rgba(255, 255, 255, 0.9);
+}
+/*SECTION DOS: Diseño Grid column*/
+main section#promociones{
+    position: relative;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column: 1; 
+    padding: 10px;  
+}
+/*-----SECTION DOS-COLUMNA UNA: Diseño text0 */
+main section#promociones div div.texto{
+    width: 15%;
+    height: 720px;
+    display: inline-block;
+    border: .5px solid transparent;
+}
+main section#promociones div div.texto span{
+    position: relative;
+    display: block;
+    font-size: 2.5em;
+    color: #F5987F;
+    animation: flip 2s infinite;
+    animation-delay: calc(.1s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+/*SECTION DOS-COLUMNA UNA/DOS: Diseño de box--imagen-------------*/
+main section#promociones div div.box{
+    width: 100%;
+    height: 120px;
+    margin: 10px 2px;
+    padding: 1px;
+    border: 1px solid transparent;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    column-gap: .5px;
+}
+.sectionImagen{
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+/*SECTION  DOS: Section grid*/
+.sectionGrid{
+    height: 120px;
+    border: .2px solid transparent;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: .1px;
+}
+.sectionGrid select{
+    margin: 1px auto 0px;
+    padding: 2px;
+    text-align: center;
+}
+/*SECTION DOS sectionGrid -- sectionGrid input*/
+.sectionGrid div button{
+    background-color: #F5987F;
+    border: 1px solid #DF867F;
+    border-radius: 10px 10px 10px 10px;
+    cursor: pointer;
+}
+.sectionGrid div button:hover{
+    background-color: #DF867F;
+    border-radius: 10px 10px 10px 10px;
+    transform: scale(1.14,1.14);
+}
+button[type=button]{
+    font-weight: bold;
+}
+
+
+

@@ -1,0 +1,59 @@
+@import url(/public/stylesheets/modeloPagina.css);
+/*SECTION DOS: Diseño Grid column*/
+main section#tiendas{
+    position: relative;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column: 1; 
+    padding: 10px;  
+}
+/*SECTION DOS: Diseño columna Uno*/
+main section#tiendas div#tiendaColumnaUno{
+    display: flex;
+    flex-flow: row wrap;
+}
+main section#tiendas div iframe{
+    margin: 25px auto;
+    border: .5px solid rgba(255, 255, 255, 0.9); 
+    box-shadow: .5px .5px 3px rgba(226, 226, 226, 0.9);  
+}
+/*SECTION DOS: Diseño columna Dos*/
+main section#tiendas div#tiendaColumnaDos{
+    display: grid;
+    grid-template-rows: 75px 100px 325px;
+    grid-row: 1;
+}
+/*SECTION DOS: Diseño columna Dos fila uno*/
+main section#tiendas div#tiendaColumnaDos div#texto span{
+    position: relative;
+    display: inline-block;
+    padding: 2px;
+    margin: 2px auto;
+    font-size: 1em;
+    color: #F5987F;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+  /*SECTION DOS: Diseño columna Dos fila dos*/
+  main section#tiendas div#tiendaColumnaDos div p{
+      text-align: center;
+      font-weight: bold;
+  }
+  /*SECTION DOS: Diseño columna Dos fila tres*/
+  #tiendaColumnaDosFilaTres{
+    width: 60%;
+    height: 250px;
+    padding: 2px;
+    margin: 1px auto;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: .5px .5px 3px rgba(226, 226, 226, 0.9);
+    overflow-y: scroll;
+  }
+  #tiendaColumnaDosFilaTres ul li p span{
+    color: #F5987F;
+  }

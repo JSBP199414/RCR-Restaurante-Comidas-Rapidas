@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.01"/>
+  <link rel="icon" href="/public/images/icons8-food-bar-48.ico">
+  <link rel="stylesheet" href="/public/stylesheets/tiendas.css">
+  <link rel="stylesheet" href="/public/stylesheets/mediaQuery/modeloMediaQueryTiendas.css">
+  <!--Script Sweetalert-Libreria-->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <title>Restaurante Comidas Rapidas</title>
+</head>
+<body>
+  <!---------------------------CONTENT FLEX-------------------------->
+  <div id="content">
+    <!--------------HEADER------------------>
+    <header>
+      <!--HEADER LINEAUNO-->
+      <div class="lineaUno">
+        <!--LINEAUNO COLUMN UNO-->
+        <div><h1>Restaurante Comidas Rapidas</h1></div>
+        <!--LINEAUNO COLUMN DOS-->
+        <div>
+          <form action="get">
+            <input type="search" id="search">
+            <button type="button" id="bot">Buscar</button>
+          </form>
+        </div>
+        <!--LINEAUNO COLUMN TRES-->
+        <div>
+          <nav>
+            <ul>
+              <li><a href="http://localhost:3000/pedidos"><img src="/public/images/icons8-carro-de-compras-con-dinero-48.png" alt="Carrito de compras"></a></li>
+              <li><a href="http://localhost:3000/ingresar"><img src="/public/images/icons8-usuario-hombre-verificado-48.png" alt="Registro de usuario"></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!--HEADER LINEADOS-->
+      <div class="lineaDos">
+        <nav>
+          <ul>
+            <li><a href="http://localhost:3000">
+              <span style="--i:1">M</span>
+              <span style="--i:2">E</span>
+              <span style="--i:3">N</span>
+              <span style="--i:4">U</span></a></li>
+            <li><a href="http://localhost:3000/promociones">
+              <span style="--i:1">P</span>
+              <span style="--i:2">R</span>
+              <span style="--i:3">O</span>
+              <span style="--i:4">M</span>
+              <span style="--i:5">O</span>
+              <span style="--i:6">C</span>
+              <span style="--i:7">I</span>
+              <span style="--i:8">O</span>
+              <span style="--i:9">N</span>
+              <span style="--i:10">E</span>
+              <span style="--i:11">S</span></a></li>
+            <li><a href="#">
+              <span style="--i:1">T</span>
+              <span style="--i:2">I</span>
+              <span style="--i:3">E</span>
+              <span style="--i:4">N</span>
+              <span style="--i:5">D</span>
+              <span style="--i:6">A</span>
+              <span style="--i:7">S</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!--------------MAIN------------------>
+    <main>
+      <!--MAIN SECTION UNO-->
+      <section id="imagenes">
+        <div id="fondoUno"></div>
+        <div id="fondoDos"></div>
+        <div id="fondoTres"></div>
+        <div id="fondoCuatro"></div>
+      </section>
+      <!--MAIN SECTION DOS-->
+      <section id="tiendas">
+        <!--MAIN SECTION DOS COLUMNA UNO-->
+          <div id="tiendaColumnaUno">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d127261.64789836925!2d-74.1310464!3d4.6071808!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sco!4v1653399612272!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+          </div>
+          <!--MAIN SECTION DOS COLUMNA DOS-->
+          <div id="tiendaColumnaDos">
+              <div id="texto">
+                <span style="--i:1">E</span>
+                <span style="--i:2">N</span>
+                <span style="--i:3">C</span>
+                <span style="--i:4">U</span>
+                <span style="--i:5">E</span>
+                <span style="--i:6">N</span>
+                <span style="--i:7">T</span>
+                <span style="--i:8">R</span>
+                <span style="--i:9">A</span>
+                <span style="--i:10">-</span>
+                <span style="--i:11">T</span>
+                <span style="--i:12">U</span>
+                <span style="--i:13">-</span>
+                <span style="--i:14">R</span>
+                <span style="--i:15">E</span>
+                <span style="--i:16">S</span>
+                <span style="--i:17">T</span>
+                <span style="--i:18">A</span>
+                <span style="--i:19">U</span>
+                <span style="--i:20">R</span>
+                <span style="--i:21">A</span>
+                <span style="--i:22">N</span>
+                <span style="--i:23">T</span>
+                <span style="--i:24">E</span>
+                <span style="--i:25">-</span>
+                <span style="--i:26">C</span>
+                <span style="--i:27">O</span>
+                <span style="--i:28">M</span>
+                <span style="--i:29">I</span>
+                <span style="--i:30">D</span>
+                <span style="--i:31">A</span>
+                <span style="--i:32">S</span>
+                <span style="--i:33">-</span>
+                <span style="--i:34">R</span>
+                <span style="--i:35">A</span>
+                <span style="--i:36">P</span>
+                <span style="--i:37">I</span>
+                <span style="--i:38">D</span>
+                <span style="--i:39">A</span>
+                <span style="--i:40">S</span>
+              </div>
+              <div>
+                <p>Comida rápida hecha como en casa... con un sabor inigualable. ¡Te esperamos!</p>
+              </div>
+              <div>
+                <div id="tiendaColumnaDosFilaTres">
+                  <ul>
+                    <li><p><span>RCR Engativa</span><br>Cr 100 # 95-64 <br>De 12:00pm a 9:00 pm</p></li>
+                    <li><p><span>RCR Calle 85</span><br>Cll 85 # 15-34 <br>De 12:00pm a 9:00 pm</p></li>
+                    <li><p><span>RCR Calima</span><br>Cll 19 # 35-14 <br>De 12:00pm a 9:00 pm</p></li>
+                    <li><p><span>RCR La Esmeralda</span><br>Cll 44 # 65-89 <br>De 12:00pm a 9:00 pm</p></li>
+                    <li><p><span>RCR Normandia</span><br>Cll 53 # 81B-67 <br>De 12:00pm a 9:00 pm</p></li>
+                    <li><p><span>RCR Corferias</span><br>Cr 40 # 22C-46 <br>De 12:00pm a 9:00 pm</p></li>
+                    <li><p><span>RCR Centenario</span><br>Cll 13 # 43-46 <br>De 12:00pm a 9:00 pm</p></li>
+                    <li><p><span>RCR Auto Sur</span><br>Cll 75 Sur # 82C-12 <br>De 12:00pm a 8:00 pm</p></li>
+                    <li><p><span>RCR Kennedy</span><br>Cr 77 # 89A-56 <br>De 12:00pm a 8:00 pm</p></li>
+                    <li><p><span>RCR Uniplaza</span><br>Av 15 # 125-39 <br>De 12:00pm a 8:00 pm</p></li>
+                    <li><p><span>RCR Calle 100</span><br>Cll 100 # 42B-83 <br>De 12:00pm a 8:00 pm</p></li>
+                    <li><p><span>RCR Chico Norte</span><br>Transv. 18 # 22A-14 <br>De 12:00pm a 8:00 pm</p></li>
+                    <li><p><span>RCR Portal 80</span><br>Av 80 # 143-23 <br>De 12:00pm a 8:00 pm</p></li>
+                  </ul>
+                </div>
+              </div>
+          </div>
+      </section>
+      <!--MAIN SECTION TRES-->
+      <section class="columnTree">
+         <!--SECTION TRES COLUMN UNO-->
+        <div>
+          <nav>
+            <a href="http://localhost:3000/canvas"><img src="/public/images/modelo_pagina_general/HotDog.jpg" alt="" class="imagen"></a>
+          </nav>
+          <div><h3>Game Canvas</h3></div>
+        </div>
+        <!--SECTION TRES COLUMN DOS-->
+        <div>
+          <nav>
+            <a href="http://localhost:3000/empresa"><img src="/public/images/modelo_pagina_general/Pizza.jpg" alt="Empresa" class="imagen"></a>
+          </nav>
+          <div><h3>Empresa</h3></div>
+        </div>
+        <!--SECTION TRES COLUMN TRES-->
+        <div>
+          <nav>
+            <a href="http://localhost:3000/trabajaConNosotros"><img src="/public/images/modelo_pagina_general/Hamburguesa.jpg" alt="Trabaja con nosotros" class="imagen"></a>
+          </nav>
+          <div><h3>Trabaja con nosotros</h3></div>
+        </div>
+      </section>
+       <!--MAIN SECTION CUATRO-->
+      <section class="columnTree">
+         <!--SECTION CUATRO COLUMN UNO-->
+       <div>
+        <h4><span>RCR</span></h4>
+        <p>
+          Reprehenderit amet tempor mollit Lorem. Est nostrud do excepteur
+          culpa adipisicing reprehenderit veniam pariatur fugiat commodo
+          Lorem laboris pariatur exercitation. Amet aliquip velit ipsum
+          cupidatat ea nostrud aliquip labore magna occaecat.Est nostrud 
+          do excepteur culpa adipisicing reprehenderit veniam pariatur fugiat
+          commodo Lorem laboris pariatur exercitation. Amet aliquip velit ipsum
+          cupidatat ea nostrud aliquip labore magna occaecat.
+        </p>
+       </div>
+       <!--SECTION CUATRO COLUMN DOS-->
+       <div>
+        <h4>Contactenos</h4>
+        <p>
+            Restaurante Comidas Rapidas S.A.S Colombia. <br>
+            Nit-900 414 301 -4 <br>
+            Calle 70a # 94-67 <br>
+            Bogota, Colombia <br>
+            Llamanos-3134173095 <br>
+            Email-SuperComidasRapidas@gmail.com
+        </p>
+        <br>
+        <nav class="ContentTwo">
+            <a href="https://www.sic.gov.co/" target="_blank" rel="noopener noreferrer"><span>Superintendencia industria y comercio S.I.C</span></a>
+        </nav>
+       </div>
+       <!--SECTION CUATRO COLUMN TRES-->
+       <div id="columnTreeIcon">
+        <h4>Siguenos</h4>
+        <nav>
+          <ul>
+            <li><a href="https://www.facebook.com" target="_blank"><img src="/public/images/icons8-facebook.svg" alt="Facebook"></a></li>
+            <li><a href="https://www.twitter.com" target="_blank"><img src="/public/images/icons8-twitter.svg" alt="Twitter"></a></li>
+            <li><a href="https://www.youtube.com" target="_blank"><img src="/public/images/icons8-youtube-play.svg" alt="Youtube"></a></li>
+            <li><a href="https://www.instagram.com" target="_blank"><img src="/public/images/icons8-instagram.svg" alt="Instagram"></a></li>
+            <li><a href="https://jsbp199414.github.io/Portafolio/" target="_blank"><img src="/public/images/icons8-hamburger-50.ico" alt=""></a></li>
+          </ul>
+        </nav>
+       </div>
+      </section>
+    </main>
+     <!--------------FOOTER------------------>
+    <footer>
+      <div>
+        <nav>
+          <ul>
+            <li ><a href="/public/pdf/TerminosYCondiciones.pdf" target="_blank">Terminos y condiciones</a></li>
+            <li ><a href="/public/pdf/PoliticasDePrivacidad.pdf" target="_blank">Politicas de privacidad</a></li>
+            <li><a href="https://icons8.com/icon/DZe3wFKTc8IK/búsqueda">Búsqueda icon by Icons8</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div>
+          <p>
+            Designed and developed by <span> D-UNA</span> e-Commerce © 2022 D-UNA. Derechos reservados.
+          </p>
+      </div>
+    </footer>
+  </div>
+  <script src="/public/javascripts/busqueda.js"></script>
+</body>
+</html>

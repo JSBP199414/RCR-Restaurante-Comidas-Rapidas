@@ -1,0 +1,370 @@
+@import url(/public/stylesheets/reset.css);
+/*------------------------------Diseño responsive flexbox-general---------------------------*/
+#content{
+    margin: 0px auto;
+    min-height: 100vh;
+    padding: 1px;
+    border: .2px solid skyblue;
+    display: flex;
+    flex-flow: row wrap;  
+    align-content: flex-start;
+    justify-content: flex-start;
+}
+#content >*{
+    padding: 3px;
+    margin: .5px auto;
+    text-align: center;
+}
+/*----------------------------------------------Design HEADER----------------------------------------*/
+/*Definimos dos filas en header*/
+header{
+    flex-basis: 100%;
+    height: 200px;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    display: grid; 
+    grid-template-rows: 1fr 1fr;
+    row-gap: 1px;
+    background: linear-gradient(#EBA27A,#F5987F,#DF867F,rgba(255, 255, 255, 0.9));
+}
+/*---------------------------------Design FILAUNO----------------------------*/
+header .lineaUno{
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+    z-index: 1;
+    column-gap: 1px;
+    padding: 5px;
+}
+/*FILAUNO: Definimos text Grid-column una*/
+header .lineaUno div h1{
+    padding: 2px;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1.5px .75px rgba(255, 255, 255, 0.627),
+                 3px 1.5px rgba(165, 165, 165, 0.83);
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+/*FILAUNO: Definimos  design input-button column dos*/
+header .lineaUno form input, button{
+    width: 80%;
+    margin: 12px auto;
+    padding: 2px;
+    border: .5px solid #D4B2DB; 
+}
+header .lineaUno form button{
+    width: 40%;
+    height: 30px;
+    color:#F5987F;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.9);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    transition: 2s;
+}
+header .lineaUno form button:hover{
+    transform: scale(1.5);
+}
+#loginUsuario h3{
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 2px 1px #DF867F;
+}
+/*---------------------------------------Diseño sectionDos pagina inicial---------------------------------------------------------*/
+/*SUBMENU Carro de compras*/
+#carroCompras{
+    width: 25%;
+    height: 190px;
+    position: absolute;
+    top: 100px;
+    right: 5px;
+    overflow-y: scroll;
+    display: none;
+    z-index: 3;
+    border: .5px solid rgb(211, 211, 211);
+    border-radius: 10px;
+    background: linear-gradient(rgba(255, 255, 255, 0.9),#F5987F,#DF867F,rgba(255, 255, 255, 0.9));
+    box-shadow: 1px 2px rgb(151, 151, 151),
+    .5px 1px rgb(118, 117, 117);  
+}
+#carro:hover #carroCompras{
+    display: block;
+}
+#carroCompras div.tituloDos{
+    clip-path: polygon(10% 0%,100% 0%,90% 100%,0% 100%);
+}
+/*SUBMENU CARRO DE COMPRAS: Diseño barra de scroll*/
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.8);
+}
+/*SECTION-03 boxDos table*/
+table{
+    width: 98%;
+    height: auto;
+    margin: 10px auto;
+}
+thead tr th{
+    border: .5px solid transparent;
+    height: 15px;
+    font-size: .8em;
+    font-style: italic;
+    background-color: white;
+}
+tbody,th,td{
+    padding: 5px;
+    font-style: italic;
+    text-align: center;
+    vertical-align: top;
+    margin: 1px auto;
+    border: .5px solid rgb(211, 211, 211);
+}
+tbody td.producto, td.title{
+    font-size: .8em;
+}
+tbody td.imagenAlto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+tbody td input{
+    width: 80%;
+    margin: 1px auto;
+    text-align: center;
+    border: .2px solid rgb(211, 211, 211);
+}
+/*SECTION-03 section div*/
+#carroCompras div#total{
+    font-style: italic;
+    font-size: 1.3em;
+    text-align: left;
+    padding: 5px;
+    margin: 5px auto;
+}
+#carroCompras div#total div h2{
+    color: rgba(255, 255, 255, 0.9);
+}
+#carroCompras button{
+    width: auto;
+    margin: 2px auto;
+    padding: 2px;
+    background-color: #FADBB6;
+    border: 1px solid #E1D2B5;
+    border-radius: 10px 10px 10px 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+#carroCompras button:hover{
+    background-color: #DF867F;
+    border-radius: 10px 10px 10px 10px;
+    transform: scale(1.14,1.14);
+}
+tbody td button#delete{
+    background-color: rgb(249, 248, 248);
+    border: 1px solid rgb(249, 248, 248);
+    color: rgb(216, 0, 0);
+}
+/*FILAUNO: Definimos  design li icon column tres*/
+/*FILAUNO: DEFINIMOS IGUAL QUE LA .lineaDos nav Y .lineaDos nav ul*/
+header .lineaUno nav ul li{
+    flex: 1 1 30%;
+    padding: 2px;
+    margin: 0px 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+/*---------------------------------Design FILADOS-------------------------------------*/
+/*FILADOS: Definimos la margen del nav--definimos una lista flex*/
+header .lineaDos nav, .lineaUno nav, #columnTreeIcon nav{
+    margin: 15px auto;
+}
+header .lineaDos nav ul, .lineaUno nav ul, #columnTreeIcon nav ul, footer div nav ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 1px;
+}
+/*FILADOS: Definimos el diseño de las li--definimos text a y span animation */
+header .lineaDos nav ul li{
+    flex: 1 1 33%;
+    height: 40px;
+    padding: 7px;
+    box-sizing: border-box;
+    border: .5px solid rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); 
+}
+header .lineaDos nav ul li a,h2, h3, h4, .columnTree div nav a,footer div nav ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: large;
+    color: #F5987F;
+    text-transform: uppercase;
+    vertical-align:sub;
+    padding: 2px;       
+  }
+  .lineaDos nav ul li a span{
+    position: relative;
+    display: inline-block;
+    animation: flip 2s infinite;
+    animation-delay: calc(.1s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+/*----------------------------------------------Design MAIN----------------------------------------*/
+main{
+    flex-basis: 100%;
+    height:1300px;
+    display: grid;
+    grid-template-rows: 350px 525px 200px 225px;
+    row-gap: 1px;
+    background-color:rgba(255, 255, 255, 0.9);
+}
+/*----------MAIN: SECTION UNO-----------*/
+/*SECTION UNO: Definimos ancho y alto, colocamos fondos y animamos*/
+main #imagenes{
+    position: relative;
+}
+#fondoUno{
+    position: absolute;
+    margin:3px auto;
+    width: 100%;
+    height: 350px;
+    background-image: url(/public/images/modelo_pagina_general/Hamburguesas.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px -280px;
+    animation: opacidad 24s linear 18s infinite; 
+}
+#fondoDos{
+    position: absolute;
+    margin: 3px auto;
+    width: 100%;
+    height: 350px;
+    background-image: url(/public/images/modelo_pagina_general/Pizzas.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px -220px;
+    animation: opacidad 24s linear 12s infinite; 
+}
+#fondoTres{
+    position: absolute;
+    margin: 3px auto;
+    width: 100%;
+    height: 350px;
+    background-image: url(/public/images/modelo_pagina_general/Postres.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px -300px;
+    animation: opacidad 24s linear 6s infinite; 
+}
+#fondoCuatro{
+    position: absolute;
+    margin: 3px auto;
+    width: 100%;
+    height: 350px;
+    background-image: url(/public/images/modelo_pagina_general/Restaurante.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px -280px; 
+    animation: opacidad 24s linear 0s infinite;   
+}
+@keyframes opacidad{
+    0%{opacity: 1;
+    }
+    20%{
+        opacity: 1;
+    }
+    30%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/*---------------MAIN: SECTION DOS-------------*/
+/*---------------MAIN: SECTION TRES-------------*/
+/*SECTION TRES: Definimos Grid column, posicionamos imagenenes y textos*/
+main .columnTree{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1px;
+    padding: 5px;
+}
+main .columnTree .imagen{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;  
+    transition: .7s;
+}
+.imagen:hover{
+    transform: translate(0,-4px);
+}
+main .columnTree div{
+    position: relative;
+}
+main .columnTree div div{
+    position: absolute;
+    top: 20px;
+    left: 60px;
+}
+main .columnTree div div h3{
+    font-size: 1.5em;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 2px 1px #DF867F;
+}
+/*---------------MAIN: SECTION CUATRO-------------*/
+/*SECTION CUATRO: Definimos Grid column con la clase columnTree*/
+/*SECTION CUATRO => FILADOS: Definimos la margen del nav--definimos una lista flex*/
+main .columnTree div h4{
+    padding: 5px;
+    margin: 10px auto;
+}
+main .columnTree div p{
+    font-weight: normal;
+    font-size: .9em;
+    padding: 4px;
+    margin: 8px auto;
+    box-sizing: border-box;
+}
+/*----------------------------------------------Design FOOTER----------------------------------------*/
+footer{
+    flex-basis: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-rows: 30px  20px;
+    row-gap: 1px;
+    background: linear-gradient(rgba(255, 255, 255, 0.9),#db9b96);
+}
+/*FOOTER DIV NAV => FILADOS: Definimos  una lista flex*/
+footer div nav{
+    margin: 5px auto;
+}
+/*FOOTER DIV NAV => FILADOS: Definimos li a*/
+footer div nav ul li a{
+    margin: 1px 8px;
+    vertical-align: super;
+}
+footer div p{
+    font-size: .9em;
+    padding: 2px;
+}
+footer div p span{
+color: #7482fe;
+}

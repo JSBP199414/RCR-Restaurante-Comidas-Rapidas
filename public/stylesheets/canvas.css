@@ -1,0 +1,45 @@
+@import url(/public/stylesheets/reset.css);
+
+body{
+    background: linear-gradient(#EBA27A,#F5987F,#DF867F,rgba(255, 255, 255, 0.9));
+}
+
+/*------------------------------------CANVAS DISEÑO--------------------------------*/
+#contentCanvas{
+    width: 498px;
+    height: 498px;
+    position: relative;
+    border: 6.5px solid #a7d4ff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    position: absolute;
+    left: 495px;
+    top: 100px;
+}
+div#marcador{
+    position: absolute;
+    top: 95px;
+    left: 10px;
+    width: 30%;
+    height: 500px;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #a7d4ff;
+}
+nav ul li a{
+    font-weight: bold;
+    text-align: center;
+    color: #a7d4ff;
+    text-decoration: none;
+}
+div#marcador p{
+    font-weight: bold;
+    color: black;
+    
+}
+div#marcador nav ul li{
+    margin: 5px auto;
+    padding: 2px;
+}

@@ -1,0 +1,91 @@
+@import url(/public/stylesheets/modeloPagina.css);
+
+/*----------------SECTION DOS- Diseño de section dos--------------------*/
+/*MAIN: Diseño main--Tomamos el mismo diseño main de modelo y cambiamos el tamaño de row dos*/
+main{
+    flex-basis: 100%;
+    height:2450px;
+    display: grid;
+    grid-template-rows: 350px 1675px 200px 225px;
+    row-gap: 1px;
+    background-color:rgba(255, 255, 255, 0.9);
+}
+/*SECTION DOS: Diseño Grid column*/
+main section#empresa{
+    position: relative;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-column: 1; 
+    padding: 10px;  
+}
+/*-----SECTION DOS-COLUMNA UNO: Diseño text0 */
+main section#empresa div#columnaUno img{
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+main section#empresa div#columnaUno div.divTexto{
+    position: absolute;
+    top: 1200px;
+    left: 170px;
+}
+/*-----SECTION DOS-COLUMNA DOS: Diseño text0 */
+main section#empresa div div.texto{
+    display: inline-block;
+    margin: 10px auto;
+    border: .5px solid transparent;
+}
+main section#empresa div div.texto span{
+    position: relative;
+    display: inline-block;
+    font-size: 1.5em;
+    color: #F5987F;
+    animation: flip 2s infinite;
+    animation-delay: calc(.1s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+main section#empresa div#columnaDos p{
+    padding: 1px;
+}
+main section#empresa div#columnaDos div{
+    margin: 15px auto;
+}
+main section#empresa div#columnaDos div img#restaurante{
+    width: 100%;
+    height: 450px;
+    object-fit: contain;
+}
+ div#imagenUno{
+    width: 7.1%;
+    height: 95px;
+    position: absolute;
+    top: 1300px;
+    left: 750px;
+    background-image: url(/public/images/empresa/Hamburguesa.png);
+    background-size: contain;
+}
+div#imagenDos{
+    width: 7.1%;
+    height: 78px;
+    position: absolute;
+    top: 1450px;
+    left: 700px;
+    background-image: url(/public/images/empresa/Pizza.png);
+    background-size: contain;
+}
+div#imagenTres{
+    width: 4.1%;
+    height: 70px;
+    position: absolute;
+    top: 1400px;
+    left: 850px;
+    background-image: url(/public/images/empresa/HotDog.png);
+    background-size: contain;
+}

@@ -1,0 +1,56 @@
+@import url(/public/stylesheets/modeloPagina.css);
+
+/*--------------------SECTION DOS Diseño de section---------------------*/
+main section#ingresar,p{
+    padding: 10px;
+}
+main section#ingresar div#texto span{
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    margin: 2px auto;
+    font-size: 1.5em;
+    color: #F5987F;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+  main section#ingresar nav a{
+    text-decoration: none;
+  }
+  /*SECTION DOS Diseño formulario*/
+  main section#ingresar fieldset{
+    width: 80%;
+    height: 400px;
+    margin: 5px auto;
+    padding: 5px;
+  }
+  main section#ingresar legend{
+    color: #F5987F;
+    font-size: 1.4em;
+  }
+  /*SECTION DOS Diseño inputs*/
+  main section#ingresar input{
+    width: 30%;
+    height: 35px;
+    margin: 25px 5px;
+    padding: 2px;
+    border: .5px solid rgba(226, 226, 226, 0.9);
+  }
+  main section#ingresar input[type=checkbox]{
+    width: 2%;
+    height: 15px;
+    vertical-align: sub;
+  }
+  main section#ingresar input[type=submit]{
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    cursor: pointer;
+    transition: 2s;
+  }
+  main section#ingresar input[type=submit]:hover{
+    transform: scale(1.5, 1.5);
+  }

@@ -1,0 +1,8 @@
+@import url(/public/stylesheets/mediaQuery/modeloMediaQuery.css);
+
+/*--------------------Mediaquery max-width:780---------------*/
+@media all and (max-width:780px){
+    /*MAIN*/
+    main{height:2400px; grid-template-rows: 250px 1025px 600px 525px;}
+    main section#tiendas{display: block;}
+}
